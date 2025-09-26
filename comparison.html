@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WEB-HYBRID - Сравнение</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.7.5/dist/css/foundation.min.css">
+	<link rel="stylesheet" href="css/custom.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.7.5/dist/js/foundation.min.js"></script>
+    <script>
+        $(document).foundation();
+    </script>
+</head>  
+<div class="top-bar" id="example-menu">
+    <div class="top-bar-left">
+        <ul class="menu">
+            <li class="menu-text">WEB-HYBRID</li>
+            <li><a href="index.html">Главная</a></li>
+            <li>
+                <a href="servers.html">HTTP Серверы ▾</a>
+                <ul>
+                    <li><a href="apache.html">Apache</a></li>
+                    <li><a href="nginx.html">Nginx</a></li>
+                    <li><a href="litespeed.html">LiteSpeed</a></li>
+                </ul>
+            </li>
+            <li><a href="languages.html">Языки программирования</a></li>
+            <li><a href="comparison.html">Сравнение</a></li>
+        </ul>
+    </div>
+</div>
+    <!-- Main Content -->
+    <div class="grid-container">
+    <div class="grid-x grid-padding-x" style="padding-top: 2rem;">
+        <!-- Main Content Area -->
+        <div class="large-8 cell">
+            <div class="hero-section">
+                <h1>Сравнение HTTP серверов</h1>
+                <p>Детальный анализ и сравнение самых популярных веб-серверов: Apache, Nginx и LiteSpeed.</p>
+            </div>
+
+            <article class="blog-post">
+                <h2>Сравнительная таблица</h2>
+                <p>В этой таблице представлено сравнение основных характеристик популярных HTTP серверов.</p>
+                
+                <div class="table-scroll">
+                    <table class="hover stack">
+                        <thead>
+                            <tr>
+                                <th>Характеристика</th>
+                                <th>Apache</th>
+                                <th>Nginx</th>
+                                <th>LiteSpeed</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Архитектура</strong></td>
+                                <td>Процессно-ориентированная</td>
+                                <td>Событийно-ориентированная</td>
+                                <td>Событийно-ориентированная</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Производительность при высоких нагрузках</strong></td>
+                                <td><span class="label warning">Средняя</span></td>
+                                <td><span class="label success">Высокая</span></td>
+                                <td><span class="label success">Очень высокая</span></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Потребление памяти</strong></td>
+                                <td><span class="label alert">Высокое</span></td>
+                                <td><span class="label success">Низкое</span></td>
+                                <td><span class="label success">Низкое</span></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Поддержка .htaccess</strong></td>
+                                <td><span class="label success">Полная</span></td>
+                                <td><span class="label warning">Ограниченная</span></td>
+                                <td><span class="label success">Полная</span></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Поддержка PHP</strong></td>
+                                <td>mod_php</td>
+                                <td>PHP-FPM</td>
+                                <td>LSAPI</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Лицензия</strong></td>
+                                <td>Apache 2.0 (Бесплатная)</td>
+                                <td>BSD-подобная (Бесплатная)</td>
+                                <td>Проприетарная (Платная)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Сложность настройки</strong></td>
+                                <td><span class="label success">Низкая</span></td>
+                                <td><span class="label warning">Средняя</span></td>
+                                <td><span class="label success">Низкая</span></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Статический контент</strong></td>
+                                <td>Хорошо</td>
+                                <td>Отлично</td>
+                                <td>Отлично</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Динамический контент</strong></td>
+                                <td>Отлично</td>
+                                <td>Хорошо</td>
+                                <td>Отлично</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Рыночная доля</strong></td>
+                                <td>31.4%</td>
+                                <td>33.9%</td>
+                                <td>~8%</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </article>
+
+            <article class="blog-post">
+                <h2>Детальный анализ производительности</h2>
+                
+                <h3>Тестирование производительности</h3>
+                <p>Результаты тестирования на сервере с 4 ядрами CPU и 8GB RAM:</p>
+                
+                <div class="grid-x grid-margin-x">
+                    <div class="medium-4 cell text-center">
+                        <div class="card">
+                            <div class="card-section">
+                                <h4>Запросов в секунду</h4>
+                                <div class="stat">1,200</div>
+                                <div class="progress">
+                                    <div class="progress-meter" style="width: 25%"></div>
+                                </div>
+                                <small>Apache</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="medium-4 cell text-center">
+                        <div class="card">
+                            <div class="card-section">
+                                <h4>Запросов в секунду</h4>
+                                <div class="stat">3,500</div>
+                                <div class="progress">
+                                    <div class="progress-meter" style="width: 65%"></div>
+                                </div>
+                                <small>Nginx</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="medium-4 cell text-center">
+                        <div class="card">
+                            <div class="card-section">
+                                <h4>Запросов в секунду</h4>
+                                <div class="stat">8,000</div>
+                                <div class="progress">
+                                    <div class="progress-meter" style="width: 100%"></div>
+                                </div>
+                                <small>LiteSpeed</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <h3>Потребление памяти</h3>
+                <div class="grid-x grid-margin-x">
+                    <div class="cell">
+                        <div class="progress" role="progressbar">
+                            <div class="progress-meter" style="width: 80%">
+                                <p class="progress-meter-text">Apache: 80MB на процесс</p>
+                            </div>
+                        </div>
+                        <div class="progress" role="progressbar">
+                            <div class="progress-meter" style="width: 30%">
+                                <p class="progress-meter-text">Nginx: 30MB на процесс</p>
+                            </div>
+                        </div>
+                        <div class="progress" role="progressbar">
+                            <div class="progress-meter" style="width: 25%">
+                                <p class="progress-meter-text">LiteSpeed: 25MB на процесс</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <article class="blog-post">
+                <h2>Выбор сервера для различных сценариев</h2>
+                
+                <div class="grid-x grid-margin-x">
+                    <div class="large-4 cell">
+                        <div class="card">
+                            <div class="card-section">
+                                <h3>🚀 Небольшой сайт с низкой нагрузкой</h3>
+                                <p><strong>Рекомендуется: Apache</strong></p>
+                                <p>Для небольших сайтов с низкой нагрузкой подойдет Apache благодаря простоте настройки и широкой поддержке хостинг-провайдеров.</p>
+                                <ul>
+                                    <li>Блог на WordPress</li>
+                                    <li>Сайт-визитка</li>
+                                    <li>Личный проект</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="large-4 cell">
+                        <div class="card">
+                            <div class="card-section">
+                                <h3>💪 Высоконагруженный проект</h3>
+                                <p><strong>Рекомендуется: Nginx или LiteSpeed</strong></p>
+                                <p>Для высоконагруженных проектов лучше выбрать Nginx или LiteSpeed из-за их эффективной работы с большим количеством одновременных соединений.</p>
+                                <ul>
+                                    <li>Интернет-магазин</li>
+                                    <li>Медиа-портал</li>
+                                    <li>API сервис</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="large-4 cell">
+                        <div class="card">
+                            <div class="card-section">
+                                <h3>🔄 Сайт с динамическим контентом</h3>
+                                <p><strong>Рекомендуется: Apache или LiteSpeed</strong></p>
+                                <p>Для сайтов с преимущественно динамическим контентом Apache может быть предпочтительнее благодаря удобной интеграции с различными языками программирования.</p>
+                                <ul>
+                                    <li>Социальная сеть</li>
+                                    <li>Веб-приложение</li>
+                                    <li>CRM система</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <h3>Дополнительные сценарии</h3>
+                <div class="grid-x grid-margin-x">
+                    <div class="medium-6 cell">
+                        <div class="callout">
+                            <h4>🛡️ Требования безопасности</h4>
+                            <p><strong>LiteSpeed</strong> - встроенная защита от DDoS-атак делает его идеальным для проектов с высокими требованиями безопасности.</p>
+                        </div>
+                    </div>
+                    <div class="medium-6 cell">
+                        <div class="callout">
+                            <h4>💰 Бюджетные решения</h4>
+                            <p><strong>Apache или Nginx</strong> - бесплатные решения с открытым исходным кодом, идеальны для стартапов и проектов с ограниченным бюджетом.</p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <article class="blog-post">
+                <h2>Миграция между серверами</h2>
+                
+                <h3>С Apache на Nginx</h3>
+                <div class="callout warning">
+                    <p><strong>Сложность: Средняя</strong></p>
+                    <p>Требуется переписать конфигурационные файлы, так как синтаксис отличается. .htaccess файлы не будут работать напрямую.</p>
+                </div>
+
+                <h3>С Apache на LiteSpeed</h3>
+                <div class="callout success">
+                    <p><strong>Сложность: Низкая</strong></p>
+                    <p>LiteSpeed полностью совместим с Apache конфигурациями. Можно использовать те же .htaccess файлы без изменений.</p>
+                </div>
+
+                <h3>Гибридные решения</h3>
+                <p>Часто используется комбинация серверов:</p>
+                <ul>
+                    <li><strong>Nginx + Apache</strong> - Nginx обрабатывает статический контент, Apache - динамический</li>
+                    <li><strong>Nginx как обратный прокси</strong> - балансировка нагрузки между несколькими серверами</li>
+                </ul>
+            </article>
+
+            <article class="blog-post">
+                <h2>Будущее веб-серверов</h2>
+                
+                <div class="grid-x grid-margin-x">
+                    <div class="cell">
+                        <div class="card">
+                            <div class="card-section">
+                                <h4>Тренды развития</h4>
+                                <ul>
+                                    <li><strong>HTTP/3 и QUIC</strong> - все основные серверы добавляют поддержку новых протоколов</li>
+                                    <li><strong>Контейнеризация</strong> - оптимизация для работы в Docker и Kubernetes</li>
+                                    <li><strong>Безопасность</strong> - усиление встроенных механизмов защиты</li>
+                                    <li><strong>Производительность</strong> - постоянное улучшение обработки запросов</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center">
+                    <a href="servers.html" class="button large">Подробнее о каждом сервере</a>
+                    <a href="languages.html" class="button large hollow">Языки программирования</a>
+                </div>
+            </article>
+        </div>
+
+        <!-- Sidebar -->
+        <div class="large-4 cell">
+            <aside class="sidebar">
+                <div class="card">
+				<div class="card-section">
+                    <h4>Быстрая навигация</h4>
+                    <ul class="menu vertical">
+                        <li><a href="apache.html">Apache HTTP Server</a></li>
+                        <li><a href="nginx.html">Nginx</a></li>
+						<li><a href="litespeed.html">LiteSpeed</a></li>
+                        <li><a href="comparison.html">Сравнение серверов</a></li>
+                    </ul>
+                </div>	
+                    <div class="card-section">
+                        <h3>Опрос</h3>
+                        <p>Какой HTTP сервер вы предпочитаете?</p>
+                        <form id="poll-form">
+                            <div class="grid-x grid-margin-x">
+                                <div class="cell">
+                                    <input type="radio" name="poll" id="apache" value="apache">
+                                    <label for="apache">Apache</label>
+                                </div>
+                                <div class="cell">
+                                    <input type="radio" name="poll" id="nginx" value="nginx">
+                                    <label for="nginx">Nginx</label>
+                                </div>
+                                <div class="cell">
+                                    <input type="radio" name="poll" id="litespeed" value="litespeed">
+                                    <label for="litespeed">LiteSpeed</label>
+                                </div>
+                                <div class="cell">
+                                    <input type="radio" name="poll" id="other" value="other">
+                                    <label for="other">Другой</label>
+                                </div>
+                                <div class="cell">
+                                    <button class="button expanded" type="submit">Голосовать</button>
+                                </div>
+                            </div>
+                        </form>
+                        <div id="poll-thanks" class="callout success" style="display: none;">
+                            <h5>Спасибо за ваш голос!</h5>
+                            <p>Ваше мнение очень важно для нас.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-section">
+                        <h4>Статистика использования</h4>
+                        <p>Данные за 2024 год:</p>
+                        <canvas id="serverStats" width="300" height="200"></canvas>
+                        <ul class="no-bullet">
+                            <li>Apache: 31.4%</li>
+                            <li>Nginx: 33.9%</li>
+                            <li>LiteSpeed: 8.2%</li>
+                            <li>Другие: 26.5%</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-section">
+                        <h4>Полезные ресурсы</h4>
+                        <ul class="menu vertical">
+                            <li><a href="https://httpd.apache.org/docs/" target="_blank">📖 Документация Apache</a></li>
+                            <li><a href="https://nginx.org/en/docs/" target="_blank">📖 Документация Nginx</a></li>
+                            <li><a href="https://www.litespeedtech.com/docs/" target="_blank">📖 Документация LiteSpeed</a></li>
+                            <li><a href="https://www.php.net/docs.php" target="_blank">📖 Документация PHP</a></li>
+                            <li><a href="https://docs.python.org/3/" target="_blank">📖 Документация Python</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-section">
+                        <h4>Сравнение по категориям</h4>
+                        <table class="unstriped">
+                            <tr><td><strong>Лучший для начинающих</strong></td><td>Apache</td></tr>
+                            <tr><td><strong>Лучшая производительность</strong></td><td>LiteSpeed</td></tr>
+                            <tr><td><strong>Лучшее соотношение цена/качество</strong></td><td>Nginx</td></tr>
+                            <tr><td><strong>Лучшая совместимость</strong></td><td>Apache</td></tr>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-section">
+                        <h4>Советы по выбору</h4>
+                        <ul>
+                            <li>Начинающим - Apache</li>
+                            <li>Высокие нагрузки - Nginx</li>
+                            <li>Enterprise - LiteSpeed</li>
+                            <li>Бюджетные решения - Apache/Nginx</li>
+                        </ul>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </div>
+</div>
+
+<style>
+.stat {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #1779ba;
+}
+.progress-meter-text {
+    color: white;
+    font-size: 0.8rem;
+}
+.table-scroll {
+    overflow-x: auto;
+}
+</style>
+
+<script>
+document.getElementById('poll-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    const selected = document.querySelector('input[name="poll"]:checked');
+    if (!selected) {
+        alert('Пожалуйста, выберите вариант!');
+        return;
+    }
+    
+    document.getElementById('poll-form').style.display = 'none';
+    document.getElementById('poll-thanks').style.display = 'block';
+});
+
+// Простая реализация графика (можно заменить на Chart.js)
+const canvas = document.getElementById('serverStats');
+const ctx = canvas.getContext('2d');
+const data = [31.4, 33.9, 8.2, 26.5];
+const colors = ['#ff6b6b', '#4ecdc4', '#45b7d1', '#96ceb4'];
+
+ctx.fillStyle = '#f8f9fa';
+ctx.fillRect(0, 0, 300, 200);
+
+data.forEach((value, index) => {
+    const barHeight = (value / 40) * 150;
+    const barWidth = 50;
+    const x = 30 + index * 70;
+    const y = 180 - barHeight;
+    
+    ctx.fillStyle = colors[index];
+    ctx.fillRect(x, y, barWidth, barHeight);
+    
+    ctx.fillStyle = '#333';
+    ctx.font = '12px Arial';
+    ctx.fillText(value + '%', x + 10, y - 5);
+});
+
+ctx.fillStyle = '#333';
+ctx.font = '10px Arial';
+ctx.fillText('Apache', 35, 195);
+ctx.fillText('Nginx', 105, 195);
+ctx.fillText('LiteSpeed', 165, 195);
+ctx.fillText('Другие', 240, 195);
+</script>
+    <!-- Footer -->
+    <footer class="footer margin-top-3">
+        <div class="grid-container">
+            <div class="grid-x">
+                <div class="large-12 cell">
+                    <p>WEB-HYBRID - Ресурс, посвященный HTTP серверам и технологиям веб-разработки.</p>
+                    <p>Контакты: <a href="mailto:KislyakovaMaria@WEB-HYBRID.ru">KislyakovaMaria@WEB-HYBRID.ru</a> | +7 (999) 123-45-67</p>
+                    <p>&copy; 2025 WEB-HYBRID. Все права защищены.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
